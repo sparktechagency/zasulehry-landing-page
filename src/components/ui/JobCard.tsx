@@ -83,7 +83,7 @@ const JobCard: FC<JobCardProps> = ({
         <h2 className="line-clamp-2 text-white text-lg font-semibold mb-1 text-start">
           {position}
         </h2>
-        <p className="text-white text-lg mb-4 text-start">{salary}</p>
+        <p className="text-white text-lg mb-4 text-start">{salary}ly</p>
 
         <div className="flex justify-between items-center mb-4">
           <span className="bg-[#FFFFFF0D] border text-white border-[#FFFFFF1A] text-sm px-3 py-1 rounded">
