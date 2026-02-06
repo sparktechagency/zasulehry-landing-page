@@ -7,7 +7,7 @@ export interface JobCardProps {
   id: number | string;
   company: string;
   location: string;
-  category: string;
+  category?: string;
   position: string;
   salary: string;
   type: string;
