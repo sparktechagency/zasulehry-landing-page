@@ -55,6 +55,8 @@ const page = async ({
         currentPage: response.pagination?.page || 1,
       };
 
+      console.log("resposve", response);
+
       jobs = response.data.map((item: any) => {
         const createdDate = new Date(item.createdAt);
         const currentDate = new Date();
@@ -66,7 +68,8 @@ const page = async ({
 
         return {
           id: item._id,
-          title: item.subCategory || item.category || "Untitled Job",
+          title: item.subCategory || "Untitled Job",
+          subscategory: item.category,
           company: item.author?.name || "Sparktech Agency",
           location: item.author?.address || "N/A",
           salary: item.salaryAmount

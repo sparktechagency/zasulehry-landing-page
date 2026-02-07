@@ -243,7 +243,7 @@ const FilterModal = ({
               min = 1;
               max = 100;
             } else if (salaryType === "Year") {
-              min = 1000;
+              min = 100;
               max = 200000;
             }
 

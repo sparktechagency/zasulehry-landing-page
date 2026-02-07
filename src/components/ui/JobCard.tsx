@@ -8,6 +8,7 @@ export interface JobCardProps {
   company: string;
   location: string;
   category?: string;
+  subCategory: string;
   position: string;
   salary: string;
   type: string;
@@ -21,6 +22,7 @@ const JobCard: FC<JobCardProps> = ({
   company,
   location,
   category,
+  subCategory,
   position,
   salary,
   type,
@@ -77,7 +79,10 @@ const JobCard: FC<JobCardProps> = ({
         </div>
 
         {/* Job Details */}
-        <h2 className="line-clamp-2 text-white text-lg font-semibold mb-1 mt-9 text-start">
+        <h2 className="line-clamp-2 text-white text-lg font-semibold mb-1 mt- text-start">
+          {subCategory}
+        </h2>
+        <h2 className="line-clamp-2 text-white text-lg font-semibold mb-1 mt- text-start">
           {category}
         </h2>
         <h2 className="line-clamp-2 text-white text-lg font-semibold mb-1 text-start">

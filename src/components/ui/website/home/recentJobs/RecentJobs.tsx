@@ -143,6 +143,7 @@ const RecentJobs = ({ initialJobs = [], categories = [] }: RecentJobsProps) => {
                   company={job.company}
                   location={job.location}
                   category={job?.category}
+                  subCategory={job?.subCategory}
                   position={job.position || job.title || ""}
                   salary={job.salary}
                   type={job.type}
