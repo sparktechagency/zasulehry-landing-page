@@ -69,16 +69,14 @@ export default async function Footer() {
             </h3>
             <ul className="space-y-3">
               <Link
-                href={`https://wa.me/${contactInfo?.phone}`}
+                href={`https://wa.me/${contactInfo?.whatsApp}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {" "}
                 <li className="flex items-center text-gray-200 text-sm">
                   <PhoneIcon />
-                  <span className="ml-2">
-                    {contactInfo?.phone || "+8802563565652"}
-                  </span>
+                  <span className="ml-2">{contactInfo?.whatsApp}</span>
                 </li>
               </Link>
 
@@ -91,9 +89,7 @@ export default async function Footer() {
                 >
                   <li className="flex items-center text-gray-200 text-sm">
                     <EmailIcon />
-                    <span className="ml-2">
-                      {contactInfo?.email || "JobsinApp.Com"}
-                    </span>
+                    <span className="ml-2">{contactInfo?.email}</span>
                   </li>
                 </Link>
               </div>
