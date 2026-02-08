@@ -5,7 +5,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
   let jobData = null;
 
-  const apiBaseUrl = process.env.BASE_URL || "http://10.10.7.7:5000/api/v1";
+  const apiBaseUrl = process.env.BASE_URL!;
   const hostUrl = apiBaseUrl.split("/api")[0];
 
   try {

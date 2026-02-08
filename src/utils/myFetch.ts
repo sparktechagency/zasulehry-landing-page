@@ -1,5 +1,5 @@
 export const myFetch = async (endpoint: string, options: RequestInit = {}) => {
-  const baseUrl = process.env.BASE_URL || "http://10.10.7.7:5000/api/v1";
+  const baseUrl = process.env.BASE_URL;
   const url = `${baseUrl}${
     endpoint.startsWith("/") ? endpoint : `/${endpoint}`
   }`;

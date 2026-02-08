@@ -33,7 +33,7 @@ export default async function Footer() {
                 height={120}
                 sizes="160px"
                 quality={100}
-                className="w-[160px] h-[120px]"
+                className="w-40 h-[120px]"
               />
             </Link>
           </div>

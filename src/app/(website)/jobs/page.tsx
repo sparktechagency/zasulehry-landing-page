@@ -14,7 +14,7 @@ const page = async ({
   const params = await searchParams;
 
   // Use the host for images (assumed to be the same as API but without the /api/v1 suffix)
-  const apiBaseUrl = process.env.BASE_URL || "http://10.10.7.7:5000/api/v1";
+  const apiBaseUrl = process.env.BASE_URL!;
   const hostUrl = apiBaseUrl.split("/api")[0];
 
   try {

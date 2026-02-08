@@ -146,7 +146,7 @@ const ContactUsPage = ({
                       rel="noopener noreferrer"
                       className="text-white hover:text-teal-400 transition-colors"
                     >
-                      {contactInfo.email}
+                      {contactInfo?.email}
                     </a>
                   ) : (
                     <span className="text-white">-</span>

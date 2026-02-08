@@ -1,6 +1,6 @@
 
 --- 2025-12-30T11:45:55.306Z ---
-URL: http://10.10.7.7:5000/api/v1/supports/create
+URL: https://api.jobsinapp.de/api/v1/supports/create
 Result: {
   "success": false,
   "message": "Validation Error",
@@ -30,7 +30,7 @@ Received FormData Keys: ["name","email","phone","location","message"]
 Received FormData Keys: ["name","email","phone","location","message","image"]
 
 --- 2025-12-30T11:52:24.683Z ---
-URL: http://10.10.7.7:5000/api/v1/supports/create
+URL: https://api.jobsinapp.de/api/v1/supports/create
 Result: {
   "message": "Only .jpeg, .png, .jpg file supported"
 }
@@ -38,7 +38,7 @@ Result: {
 Received FormData Keys: ["name","email","phone","location","message","image"]
 
 --- 2025-12-30T11:56:34.047Z ---
-URL: http://10.10.7.7:5000/api/v1/supports/create
+URL: https://api.jobsinapp.de/api/v1/supports/create
 Result: {
   "success": false,
   "message": "Validation Error",
@@ -66,7 +66,7 @@ Result: {
 Received FormData Keys: ["name","email","phone","location","message","image"]
 
 --- 2025-12-30T11:56:58.509Z ---
-URL: http://10.10.7.7:5000/api/v1/supports/create
+URL: https://api.jobsinapp.de/api/v1/supports/create
 Result: {
   "success": false,
   "message": "Validation Error",
@@ -94,7 +94,7 @@ Result: {
 Received FormData Keys: ["name","email","phone","location","message"]
 
 --- 2025-12-30T11:58:43.112Z ---
-URL: http://10.10.7.7:5000/api/v1/supports/create
+URL: https://api.jobsinapp.de/api/v1/supports/create
 Result: {
   "success": false,
   "message": "Validation Error",

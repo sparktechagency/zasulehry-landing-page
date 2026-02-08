@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60,
   },
-  allowedDevOrigins: ["*", "10.10.7.47"],
+  allowedDevOrigins: ["*", "https://api.jobsinapp.de"],
   experimental: {
     serverActions: {
       bodySizeLimit: "10mb",
