@@ -22,7 +22,7 @@ export function validatePassword(
     requireLowercase: true,
     requireNumbers: true,
     requireSpecialChars: true,
-  }
+  },
 ): { isValid: boolean; message: string } {
   if (!password) {
     return { isValid: false, message: "Password is required" };
@@ -92,7 +92,6 @@ export function isValidUrl(url: string): boolean {
     new URL(url);
     return true;
   } catch (error) {
-    // console.log(error, "Invalid URL");
     return false;
   }
 }

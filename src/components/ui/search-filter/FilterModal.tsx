@@ -5,6 +5,7 @@ import { gradientClasses } from "@/styles/gradients";
 import { FilterData } from "./types";
 import FilterDropdown from "./FilterDropdown";
 import FilterSlider from "./FilterSlider";
+import { useRouter } from "next/navigation";
 
 interface FilterModalProps {
   isOpen: boolean;
@@ -27,8 +28,7 @@ const FilterModal = ({
     "Month",
   );
 
-  console.log("salaryType", salaryType);
-
+  const router = useRouter();
   const [salaryValue, setSalaryValue] = useState(5000);
   const [distanceValue, setDistanceValue] = useState(5);
 
@@ -39,7 +39,8 @@ const FilterModal = ({
   const [selectedCategory, setSelectedCategory] = useState("Category");
   const [selectedSubCategory, setSelectedSubCategory] =
     useState("Sub Category");
-  const [selectedFullTime, setSelectedFullTime] = useState("Job Type");
+  // const [selectedFullTime, setSelectedFullTime] = useState("Job Type");
+
   const [selectedExperience, setSelectedExperience] =
     useState("With Experience");
 
@@ -48,8 +49,6 @@ const FilterModal = ({
   );
 
   const markFieldAsTouched = (field: keyof FilterData) => {
-    console.log("field", field);
-
     setTouchedFields((prev) => new Set(prev).add(field));
   };
 
@@ -70,6 +69,7 @@ const FilterModal = ({
     "Temporary Work",
     "Career Changer",
   ];
+  const [selectedFullTime, setSelectedFullTime] = useState(fullTimeOptions[0]); // "Full Time"
 
   const experienceOptions = ["With Experience", "Without Experience"];
 
@@ -88,11 +88,6 @@ const FilterModal = ({
 
     onConfirm(data);
 
-    console.log({
-      selectedFullTime,
-      touched: touchedFields.has("employmentType"),
-    });
-
     // onClose();
   };
 
@@ -110,6 +105,35 @@ const FilterModal = ({
     }
     // onClose();
   };
+
+  // // test
+  // const handleFilter = () => {
+  //   // Build the data object
+  //   const data: FilterData = {
+  //     category: selectedCategory !== "Category" ? selectedCategory : "",
+  //     subCategory:
+  //       selectedSubCategory !== "Sub Category" ? selectedSubCategory : "",
+  //     employmentType: selectedFullTime, // this is your "Full Time / Part Time" selection
+  //     experience: selectedExperience,
+  //     salaryType: salaryType,
+  //     salaryValue: salaryValue,
+  //     distanceValue: distanceValue,
+  //   };
+
+  //   // Build the URL params
+  //   const params = new URLSearchParams();
+  //   Object.entries(data).forEach(([key, value]) => {
+  //     if (value !== "" && value !== null && value !== undefined) {
+  //       params.set(key, value.toString());
+  //     }
+  //   });
+
+  //   // Navigate to the jobs page with query params
+  //   router.push(`/jobs?${params.toString()}`);
+
+  //   // Pass the same data to the callback
+  //   onConfirm(data);
+  // };
 
   if (!isOpen) return null;
 

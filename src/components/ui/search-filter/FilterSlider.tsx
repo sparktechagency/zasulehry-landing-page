@@ -32,8 +32,8 @@ const FilterSlider = ({
       </div>
 
       <div className="mt-4">
-        <div className="flex flex-col items-center justify-center gap-1 text-center">
-          <div className="flex gap-2 text-lg">
+        <div className="flex flex-col items-center justify-center gap-1 text-center  text-white">
+          <div className="flex gap-2 text-lg ">
             <p>{valueLabel} </p>
             <p>{salaryType}</p>
           </div>

@@ -42,9 +42,6 @@ const RecentJobs = ({ initialJobs = [], categories = [] }: RecentJobsProps) => {
   const handleFilter = (filterData: FilterData) => {
     const params = new URLSearchParams();
 
-    alert("handleFilter called");
-    console.log("filterData:", filterData);
-
     if (filterData.category) params.set("category", filterData.category);
     if (filterData.subCategory)
       params.set("subCategory", filterData.subCategory);
