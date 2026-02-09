@@ -9,7 +9,7 @@ import Container from "@/components/ui/Container";
 import logo from "@/assets/banner/logo.png";
 import Image from "next/image";
 import Button from "../ui/Button";
-import { FaEarthAsia, FaChevronDown } from "react-icons/fa6";
+import SelectMethod from "./SelectMethod";
 
 const languages = [
   { name: "English", code: "en", country: "gb" },
@@ -148,9 +148,16 @@ export default function Navbar() {
               <Button href="https://portal.jobsinapp.de/login" variant="glass">
                 Login
               </Button>
-              <Button href="https://portal.jobsinapp.de/signup" variant="glass">
-                Register
-              </Button>
+              <SelectMethod
+                trigger={
+                  <button
+                    type="button"
+                    className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border border-white/20 h-12 px-3 rounded cursor-pointer"
+                  >
+                    Register
+                  </button>
+                }
+              />
             </div>
           </div>
 

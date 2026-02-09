@@ -35,7 +35,6 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
         responsibilities: item.responsibilities || [],
         qualifications: item.qualifications || [],
       };
-      console.log("OG ITEM => ", item);
     }
   } catch (error) {
     console.error("Error fetching job details:", error);

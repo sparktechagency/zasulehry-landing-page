@@ -26,7 +26,6 @@ const WebsiteMainPage = async ({ contactInfo }: { contactInfo?: any }) => {
 
     // 2. Fetch Recent Jobs
     const response = await myFetch("/jobs/public?limit=10");
-    console.log("public data", response);
 
     if (response && response.success && Array.isArray(response.data)) {
       jobs = response.data.map((item: any) => {
@@ -47,7 +46,7 @@ const WebsiteMainPage = async ({ contactInfo }: { contactInfo?: any }) => {
           salary: item.salaryAmount
             ? `€${item.salaryAmount}/${item.salaryType || "Month"}`
             : "Negotiable",
-          type: item.jobType || "Full Time",
+          type: item.jobType,
           postedDays: postedDays,
           coordinates: item?.location?.coordinates || null,
           image: item.author?.image,

@@ -5,8 +5,6 @@ import dayjs from "dayjs";
 const Impressum = async () => {
   const res = await myFetch("/disclaimers/impressum");
 
-  console.log("res", res);
-
   return (
     <div className={`bg-[#2C3E50] py-16`}>
       {/* Header */}

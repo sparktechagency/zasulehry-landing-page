@@ -36,8 +36,8 @@ export const footerSections: FooterSection[] = [
         href: "https://portal.jobsinapp.de/subscription-plan",
       },
       {
-        label: "AI Salary Comparison",
-        href: "https://portal.jobsinapp.de/login",
+        label: "Salary Comparison",
+        href: "",
       },
       {
         label: "Download Center",

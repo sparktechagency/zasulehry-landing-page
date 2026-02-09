@@ -5,6 +5,7 @@ import Container from "@/components/ui/Container";
 import Image from "next/image";
 import logo from "@/assets/banner/logo.png";
 import { myFetch } from "@/utils/myFetch";
+import FooterList from "./FooterList";
 
 export default async function Footer() {
   const currentYear = new Date().getFullYear();
@@ -39,28 +40,7 @@ export default async function Footer() {
           </div>
 
           {/* Quick Links and Legal Info Sections */}
-          {footerSections.map((section, index) => (
-            <div
-              key={section.title + index}
-              className="md:col-span-1 lg:col-span-1"
-            >
-              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-                {section.title}
-              </h3>
-              <ul className="space-y-3">
-                {section.links.map((link, index) => (
-                  <li key={link.href + index}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-200 hover:text-white transition-colors duration-200 text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <FooterList />
 
           {/* Contact Info */}
           <div className="md:col-span-1 lg:col-span-1">
@@ -68,18 +48,16 @@ export default async function Footer() {
               Contact Info
             </h3>
             <ul className="space-y-3">
-              <Link
+              {/* <Link
                 href={`https://wa.me/${contactInfo?.whatsApp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                {" "}
-                <li className="flex items-center text-gray-200 text-sm">
-                  <PhoneIcon />
-                  <span className="ml-2">{contactInfo?.whatsApp}</span>
-                </li>
-              </Link>
-
+              > */}{" "}
+              <li className="flex items-center text-gray-200 text-sm">
+                <PhoneIcon />
+                <span className="ml-2">{contactInfo?.whatsApp}</span>
+              </li>
+              {/* </Link> */}
               <div className="mt-3">
                 <Link
                   className=""
@@ -93,7 +71,6 @@ export default async function Footer() {
                   </li>
                 </Link>
               </div>
-
               {/* <li className="flex items-center text-gray-200 text-sm">
                 <ContactIcon />
                 <span className="ml-2">Contact Us</span>

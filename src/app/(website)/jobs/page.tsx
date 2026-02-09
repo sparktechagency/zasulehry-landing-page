@@ -55,8 +55,6 @@ const page = async ({
         currentPage: response.pagination?.page || 1,
       };
 
-      console.log("resposve", response);
-
       jobs = response.data.map((item: any) => {
         const createdDate = new Date(item.createdAt);
         const currentDate = new Date();

@@ -39,7 +39,7 @@ const FilterModal = ({
   const [selectedCategory, setSelectedCategory] = useState("Category");
   const [selectedSubCategory, setSelectedSubCategory] =
     useState("Sub Category");
-  const [selectedFullTime, setSelectedFullTime] = useState("Full Time");
+  const [selectedFullTime, setSelectedFullTime] = useState("Job Type");
   const [selectedExperience, setSelectedExperience] =
     useState("With Experience");
 
@@ -48,6 +48,8 @@ const FilterModal = ({
   );
 
   const markFieldAsTouched = (field: keyof FilterData) => {
+    console.log("field", field);
+
     setTouchedFields((prev) => new Set(prev).add(field));
   };
 
@@ -73,6 +75,7 @@ const FilterModal = ({
 
   const handleConfirm = () => {
     const data: FilterData = {};
+
     if (touchedFields.has("category")) data.category = selectedCategory;
     if (touchedFields.has("subCategory"))
       data.subCategory = selectedSubCategory;
@@ -84,7 +87,13 @@ const FilterModal = ({
     if (touchedFields.has("distanceValue")) data.distanceValue = distanceValue;
 
     onConfirm(data);
-    onClose();
+
+    console.log({
+      selectedFullTime,
+      touched: touchedFields.has("employmentType"),
+    });
+
+    // onClose();
   };
 
   const handleReset = () => {
@@ -99,7 +108,7 @@ const FilterModal = ({
     if (onReset) {
       onReset();
     }
-    onClose();
+    // onClose();
   };
 
   if (!isOpen) return null;
@@ -169,9 +178,9 @@ const FilterModal = ({
           label="Full Time"
           options={fullTimeOptions}
           selectedOption={selectedFullTime}
-          isOpen={activeDropdown === "fullTime"}
+          isOpen={activeDropdown === "jobtype"}
           onToggle={() =>
-            setActiveDropdown(activeDropdown === "fullTime" ? null : "fullTime")
+            setActiveDropdown(activeDropdown === "jobtype" ? null : "jobtype")
           }
           onSelect={(option) => {
             setSelectedFullTime(option);

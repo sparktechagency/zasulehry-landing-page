@@ -80,22 +80,17 @@ const NeedHelp = ({ contactInfo }: { contactInfo?: ContactInfo }) => {
                 : "opacity-0 translate-y-6"
             }`}
           >
-            <a
-              href={`https://wa.me/${(contactInfo?.phone || "+1 234 567 890").replace(/\D/g, "")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center group cursor-pointer"
-            >
-              <div className="bg-[#4361EE] p-4 rounded-full mb-3 group-hover:bg-[#3249c5] group-hover:scale-110 transition-all duration-300">
+            <div className="flex items-center justify-center">
+              <div className="bg-[#4361EE] w-14 h-14 p-4 rounded-full mb-3 group-hover:bg-[#3249c5] group-hover:scale-110 transition-all duration-300">
                 <FaPhone className="text-white text-xl" />
               </div>
-              <h3 className="text-white font-medium mb-1 group-hover:text-[#4361EE] transition-colors">
-                Phone
-              </h3>
-              <span className="text-gray-300 text-sm group-hover:text-white transition-colors">
-                {contactInfo?.phone || "+1 234 567 890"}
-              </span>
-            </a>
+            </div>
+            <h3 className="text-white font-medium mb-1 group-hover:text-[#4361EE] transition-colors text-center">
+              Phone
+            </h3>
+            <span className="text-gray-300 text-sm group-hover:text-white transition-colors">
+              {contactInfo?.whatsApp}
+            </span>
           </div>
 
           {/* Email Contact */}

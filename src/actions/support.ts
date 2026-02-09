@@ -13,7 +13,6 @@ export async function createSupportAction(formData: FormData) {
     // I will append location to the message if it's present.
 
     const allKeys = Array.from(formData.keys());
-    console.log("Received FormData Keys:", allKeys);
 
     // Log to file as well since terminal is hard to read
     const logPath = path.join(process.cwd(), "api_debug.log");

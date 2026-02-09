@@ -80,7 +80,6 @@ export default function GoogleTranslate() {
           "google_translate_element",
         );
         window.__gtReady = true;
-        console.log("Google Translate initialized");
       } catch (error) {
         console.debug("[Google Translate] Initialization error", error);
       }

@@ -33,9 +33,6 @@ const RecentJobs = ({ initialJobs = [], categories = [] }: RecentJobsProps) => {
   const router = useRouter();
   const swiperRef = useRef<SwiperType | null>(null);
 
-  console.log("initialJobs", initialJobs);
-  console.log("categories", categories);
-
   const handleSearch = (query: string) => {
     if (query.trim()) {
       router.push(`/jobs?searchTerm=${encodeURIComponent(query)}`);
@@ -44,6 +41,10 @@ const RecentJobs = ({ initialJobs = [], categories = [] }: RecentJobsProps) => {
 
   const handleFilter = (filterData: FilterData) => {
     const params = new URLSearchParams();
+
+    alert("handleFilter called");
+    console.log("filterData:", filterData);
+
     if (filterData.category) params.set("category", filterData.category);
     if (filterData.subCategory)
       params.set("subCategory", filterData.subCategory);
@@ -105,7 +106,7 @@ const RecentJobs = ({ initialJobs = [], categories = [] }: RecentJobsProps) => {
 
         <div className="flex justify-between items-center mb-7">
           <h1 className="text-2xl font-semibold text-white">
-            Recently Posted Jobs
+            {/* Recently Posted Jobs */}
           </h1>
           <Link href="/jobs">
             <p className="text-white cursor-pointer">See All</p>

@@ -25,8 +25,6 @@ const FilterSlider = ({
   leftLabel,
   rightLabel,
 }: FilterSliderProps) => {
-  console.log("value", value);
-
   return (
     <div className="mb-6">
       <div className="flex items-center mb-2">

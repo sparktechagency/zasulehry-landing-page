@@ -26,7 +26,6 @@ export function initAnalytics(): void {
   (window as any).__ANALYTICS_INITIALIZED__ = true;
 
   // Add initialization code for your analytics service here
-  console.log("Analytics initialized");
 
   // Track initial page view
   trackPageView({
@@ -43,7 +42,6 @@ export function trackPageView(data: PageViewEvent): void {
   if (typeof window === "undefined") return;
 
   // Implementation for your analytics service
-  console.log("Page view:", data);
 
   // Example Google Analytics implementation:
   // if (window.gtag) {
@@ -63,7 +61,6 @@ export function trackEvent(eventName: string, data: EventData = {}): void {
   if (typeof window === "undefined") return;
 
   // Implementation for your analytics service
-  console.log("Event:", eventName, data);
 
   // Example Google Analytics implementation:
   // if (window.gtag) {
@@ -78,12 +75,11 @@ export function trackEvent(eventName: string, data: EventData = {}): void {
  */
 export function setUserProperties(
   userId: string,
-  properties: EventData = {}
+  properties: EventData = {},
 ): void {
   if (typeof window === "undefined") return;
 
   // Implementation for your analytics service
-  console.log("User properties:", userId, properties);
 
   // Example Google Analytics implementation:
   // if (window.gtag) {

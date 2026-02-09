@@ -59,7 +59,7 @@ const ContactUsPage = ({
 
     try {
       const result = await createSupportAction(data);
-      console.log("result response ==>>", result);
+
       if (result.success) {
         toast.success(result.message);
         // Reset form after submission

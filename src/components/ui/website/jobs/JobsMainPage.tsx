@@ -89,8 +89,6 @@ const JobsMainPage = ({
   const searchParams = useSearchParams();
   const [isPending, startTransition] = useTransition();
 
-  console.log("initialJobs", initialJobs);
-
   // Clear query params on page reload (but not on navigation from home)
   useEffect(() => {
     const navigatedFromHome = sessionStorage.getItem("navigatedToJobs");

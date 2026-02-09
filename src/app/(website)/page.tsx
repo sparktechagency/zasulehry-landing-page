@@ -6,14 +6,16 @@ export const dynamic = "force-dynamic";
 export default async function Home() {
   let contactInfo = null;
 
-  try {
-    const response = await myFetch("/contact");
-    if (response && response.success && response.data) {
-      contactInfo = response.data;
-    }
-  } catch (error) {
-    console.error("Error fetching contact info:", error);
-  }
+  // try {
+  //   const response = await myFetch("/contact");
+  //   console.log("get contact", response);
+
+  //   if (response && response.success && response.data) {
+  //     contactInfo = response.data;
+  //   }
+  // } catch (error) {
+  //   console.error("Error fetching contact info:", error);
+  // }
 
   return (
     <div>
