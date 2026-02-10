@@ -138,6 +138,8 @@ const SearchFilter = ({
         isOpen={showFilterModal}
         onClose={() => setShowFilterModal(false)}
         onConfirm={(data) => {
+          console.log("dataget data", data);
+
           if (onFilter) onFilter(data);
         }}
         onReset={onReset}

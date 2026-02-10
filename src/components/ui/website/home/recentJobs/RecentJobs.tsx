@@ -40,6 +40,8 @@ const RecentJobs = ({ initialJobs = [], categories = [] }: RecentJobsProps) => {
   };
 
   const handleFilter = (filterData: FilterData) => {
+    console.log("filterData", filterData);
+
     const params = new URLSearchParams();
 
     if (filterData.category) params.set("category", filterData.category);

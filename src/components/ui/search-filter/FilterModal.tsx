@@ -31,6 +31,7 @@ const FilterModal = ({
   const router = useRouter();
   const [salaryValue, setSalaryValue] = useState(5000);
   const [distanceValue, setDistanceValue] = useState(5);
+  const [selectedFullTime, setSelectedFullTime] = useState("Job Type"); // "Full Time"
 
   // Dropdown states
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -62,14 +63,13 @@ const FilterModal = ({
   }, [selectedCategory, initialCategories]);
 
   const fullTimeOptions = [
-    "Full Time",
     "Part Time",
+    "Full Time",
     "Mini Job",
     "Ausbildung",
     "Temporary Work",
     "Career Changer",
   ];
-  const [selectedFullTime, setSelectedFullTime] = useState(fullTimeOptions[0]); // "Full Time"
 
   const experienceOptions = ["With Experience", "Without Experience"];
 
@@ -88,7 +88,7 @@ const FilterModal = ({
 
     onConfirm(data);
 
-    // onClose();
+    onClose();
   };
 
   const handleReset = () => {
